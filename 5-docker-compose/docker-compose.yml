@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  nodered-1:
+    image: nodered/node-red
+    ports:
+      - 1880:1880
+  nodered-2:
+    image: nodered/node-red
+    ports:
+      - 1881:1880
+    depends_on:
+      - nodered-1
+  hello:
+    build: .
+    restart: always
+  
