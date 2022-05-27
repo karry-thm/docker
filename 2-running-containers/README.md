@@ -14,7 +14,9 @@ Docker probiert das Image zu downloaden (immer wenn ein Container mit lokal nich
 
 ### 2.2.1 Starten
 
-Startet den Container und macht ihn auf dem Port 1880 (vor dem Doppelpunkt ist Hostsystem nach dem Doppelpunkt im Container). ```-d``` gibt an das der Prozess detached laufen soll - also im Hintergrund und nicht an die Lebenszeit des Befehls gebunden.
+Startet den Container und macht ihn auf dem Port 1880 (vor dem Doppelpunkt ist Hostsystem nach dem Doppelpunkt im Container). ```-d``` gibt an das der Prozess detached laufen soll - also im Hintergrund und nicht an die Lebenszeit des Befehls gebunden. 
+
+Der Befehl startet immer einen neuen Container. Daher kann man ihn nicht zwei mal hintereinander eingeben, da der Name beim ersten mal vergeben wurde.
 
 ```docker run -it -p 1880:1880 --name nodered -d nodered/node-red```
 
